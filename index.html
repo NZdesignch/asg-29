@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Visualiseur 3D</title>
-  <style>
-    body { margin: 0; overflow: hidden; }
-    canvas { display: block; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Modèle 3D sur GitHub</title>
+    <!-- Importation du script du lecteur 3D -->
+    <script type="module" src="https://ajax.googleapis.com"></script>
+    <style>
+        body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f0f0; }
+        model-viewer { width: 80%; height: 80%; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    </style>
 </head>
 <body>
 
-<script type="module" src="main.js"></script>
+    <!-- Remplacez "votre_modele.obj" par le nom exact de votre fichier situé dans le même dossier -->
+    <model-viewer 
+        src="votre_modele.obj" 
+        alt="Une pièce 3D chargée depuis GitHub" 
+        auto-rotate 
+        camera-controls 
+        shadow-intensity="1">
+    </model-viewer>
 
 </body>
 </html>
